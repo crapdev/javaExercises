@@ -20,33 +20,64 @@ public abstract class Product {
     
     
     // Getters
-    public String getName(){
-        return this.name;
+    public String getCode() {
+        return code;
     }
-    public int getAvaibleQuantity(){
-        return this.availableQuantity;
+    public String getName() {
+        return name;
     }
-    // Setters
-    public void setName(String name){
-        this.name = name;
+    public double getBasePrice() {
+        return basePrice;
+    }
+    public int getAvailableQuantity() {
+        return availableQuantity;
+    }
+    public boolean isActive() {
+        return active;
     }
     
+    //Setters
+    public void setCode(String code) {
+        this.code = code;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public void setBasePrice(double basePrice) {
+        this.basePrice = basePrice;
+    }
+    public void setAvailableQuantity(int availableQuantity) {
+        this.availableQuantity = availableQuantity;
+    }
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+    
+    
+    
     //Methods
-    public abstract void calculateFinalPrice();
+    public abstract double calculateFinalPrice();
+    
+    public double calculateValueInInventary(){
+        
+        
+        return calculateFinalPrice() * getAvailableQuantity();
+    }
+    
     
     public String showInformation(){
         String information = "";
         
         
-        return information ;
+        return "Code: " + code
+                + "\nName: " + name
+                + "\nBase price: " + basePrice
+                + "\nFinal price: " + calculateFinalPrice()
+                + "\nAvailable quantity: " + availableQuantity
+                + "\nActive: " + active;
     }
     
-    public double calculateValueInInventary(double finalPrice, int avaibleQuantity){
-        
-        double inventoryPrice = finalPrice * avaibleQuantity;
-        
-        return inventoryPrice;
-    }
+    
     
     
     // METODO SETTER para nombre (asigna o modifica el valor)

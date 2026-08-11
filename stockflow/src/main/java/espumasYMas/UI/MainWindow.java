@@ -35,74 +35,91 @@ public class MainWindow extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(204, 0, 51));
 
-        jButton1.setFont(new java.awt.Font("Liberation Sans", 3, 12)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Liberation Sans", 3, 14)); // NOI18N
         jButton1.setText("REGISTER PRODUCT");
         jButton1.addActionListener(this::jButton1ActionPerformed);
 
-        jButton2.setFont(new java.awt.Font("Liberation Sans", 3, 12)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Liberation Sans", 3, 14)); // NOI18N
         jButton2.setText("LIST PRODUCTS");
         jButton2.addActionListener(this::jButton2ActionPerformed);
 
-        jButton3.setFont(new java.awt.Font("Liberation Sans", 3, 12)); // NOI18N
+        jButton3.setFont(new java.awt.Font("Liberation Sans", 3, 14)); // NOI18N
         jButton3.setText("SEARCH PRODUCTS");
         jButton3.addActionListener(this::jButton3ActionPerformed);
 
-        jButton4.setFont(new java.awt.Font("Liberation Sans", 3, 12)); // NOI18N
+        jButton4.setFont(new java.awt.Font("Liberation Sans", 3, 14)); // NOI18N
         jButton4.setText("UPDATE PRODUCT");
         jButton4.addActionListener(this::jButton4ActionPerformed);
 
-        jButton5.setFont(new java.awt.Font("Liberation Sans", 3, 12)); // NOI18N
+        jButton5.setFont(new java.awt.Font("Liberation Sans", 3, 14)); // NOI18N
         jButton5.setText("DELETE PRODUCT");
         jButton5.addActionListener(this::jButton5ActionPerformed);
 
-        jButton6.setFont(new java.awt.Font("Liberation Sans", 3, 12)); // NOI18N
+        jButton6.setFont(new java.awt.Font("Liberation Sans", 3, 14)); // NOI18N
         jButton6.setText("VIEW INVENTARY SUMMARY");
         jButton6.addActionListener(this::jButton6ActionPerformed);
 
-        jButton7.setFont(new java.awt.Font("Liberation Sans", 3, 12)); // NOI18N
+        jButton7.setFont(new java.awt.Font("Liberation Sans", 3, 14)); // NOI18N
         jButton7.setText("EXIT");
         jButton7.addActionListener(this::jButton7ActionPerformed);
+
+        jLabel1.setFont(new java.awt.Font("Liberation Sans", 3, 17)); // NOI18N
+        jLabel1.setText("SELECT THE OPTION YOU WANT");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(17, 17, 17)
+                .addGap(39, 39, 39)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton1)
+                    .addComponent(jButton4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jButton5)
+                        .addGap(48, 48, 48)
+                        .addComponent(jButton6)
+                        .addGap(27, 27, 27))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jButton2)
+                        .addGap(86, 86, 86)
+                        .addComponent(jButton3)
+                        .addGap(50, 50, 50))))
+            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton6)
-                            .addComponent(jButton3)
-                            .addComponent(jButton2)
-                            .addComponent(jButton4)
-                            .addComponent(jButton5)
-                            .addComponent(jButton7)))
-                    .addComponent(jButton1))
-                .addContainerGap(540, Short.MAX_VALUE))
+                        .addGap(262, 262, 262)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(335, 335, 335)
+                        .addComponent(jButton7)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(90, 90, 90)
-                .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton4)
-                .addGap(8, 8, 8)
-                .addComponent(jButton5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(20, 20, 20)
+                .addComponent(jLabel1)
+                .addGap(52, 52, 52)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2)
+                    .addComponent(jButton3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 175, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton4)
+                    .addComponent(jButton5)
+                    .addComponent(jButton6))
+                .addGap(89, 89, 89)
                 .addComponent(jButton7)
-                .addContainerGap(278, Short.MAX_VALUE))
+                .addGap(89, 89, 89))
         );
 
         pack();
@@ -169,5 +186,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

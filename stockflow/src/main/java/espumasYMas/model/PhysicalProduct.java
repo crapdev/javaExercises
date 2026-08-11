@@ -14,20 +14,41 @@ public class PhysicalProduct extends Product{
         
     }
     
+    //Getters
+    public double getWeight() {
+        return weight;
+    }
+    public double getShippingCost() {
+        return shippingCost;
+    }
+    
+    //Setters
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+    public void setShippingCost(double shippingCost) {
+        this.shippingCost = shippingCost;
+    }
+    
+    
+    //methods
     @Override
-    public void calculateFinalPrice(){
-        double finalPrice = 0, surcharge = 0;
-        if (weight < 1) {
-            return;
-        }
-        if (getAvaibleQuantity() < 0) {
-            return;
-        }
-         
+    public double calculateFinalPrice(){
+        double  surcharge = 0;
+        
         if (weight > 10){
-            surcharge = weight * 0.08;
+            surcharge = getBasePrice() * 0.08;
         }
         
-        finalPrice =  + this.shippingCost + surcharge;
+        return getBasePrice() + shippingCost + surcharge;
     }
+    
+    @Override
+    public String showInformation() {
+
+        return super.showInformation()
+                + "\nWeight: " + weight + " kg"
+                + "\nShipping cost: " + shippingCost;
+    }
+    
 }
