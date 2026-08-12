@@ -56,6 +56,12 @@ public abstract class Product {
     
     
     //Methods
+    
+    @Override
+    public String toString() {
+        return "Product{" + "code=" + code + ", name=" + name + ", basePrice=" + basePrice + ", availableQuantity=" + availableQuantity + ", active=" + active + '}';
+    }
+
     public abstract double calculateFinalPrice();
     
     public double calculateValueInInventary(){
